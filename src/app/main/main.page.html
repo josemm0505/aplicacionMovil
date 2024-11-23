@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Bienvenido</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <img alt="Soy Ese" src="https://www.thefamouspeople.com/profiles/images/travis-scott-3.jpg" />
+    <ion-card-header>
+      <ion-card-title>Prueba de como Funcion Ionic</ion-card-title>
+      <ion-card-subtitle>Componente C</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Espero que esto me valga para tener 10 en el componente C.
+    </ion-card-content>
+    <ion-button color="medium" expand="block" id="present-alert">Clickame</ion-button>
+    <ion-alert
+  trigger="present-alert"
+  header="Esto sigue siendo una prueba"
+  subHeader="Que acabe el semestre ya, mi pc va a explotar"
+  message="Sopas"
+  [buttons]="alertButtons"
+></ion-alert>
+  </ion-card>
+
+
+  <ion-button
+    color="danger"
+    expand="block"
+    [routerLink]="['/product-list']"
+  >
+    Guerreros Z, aquí!
+  </ion-button>
+  
+</ion-content>

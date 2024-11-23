@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Guerreros Z</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Guerreros Z</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    @for (product of products; track product.id ){
+      <ion-item button [routerLink]="['/card']">
+        <ion-thumbnail slot="start">
+          <img [src]="product.image" [alt]="product.name">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{product.name}}</h2>
+          <h2>Ki: {{product.ki}}</h2>
+          <p>{{product.affiliation}}</p>
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
+</ion-content>
